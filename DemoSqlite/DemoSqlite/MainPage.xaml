@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DemoSqlite"
+            x:Class="DemoSqlite.MainPage"
+            Title="Menu">
+    <!--Flayout is a content page that displays the basic information for all the pages
+    you intend to navigate-->
+    <FlyoutPage.Flyout>
+        <local:FlyoutMenuPage x:Name="flyout"/>
+    </FlyoutPage.Flyout>
+    <!--FlyouPage detail is the page that displays the corresponds to the item selected
+    on the flyout page we could add a content -->
+    <!--put here the page you want to display first upon running the app-->
+    <FlyoutPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <local:HomePage/>
+            </x:Arguments>
+        </NavigationPage>
+    </FlyoutPage.Detail>
+</FlyoutPage>
